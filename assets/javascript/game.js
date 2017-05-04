@@ -1,5 +1,6 @@
-var wins = 0;
-var losses = 0;
+var wins = 1;
+var losses = 1;
+var score = 0;
 //var random1 = Math.floor(Math.random() * (120 - 19) + 19);
 	//document.getElementById=("randomNumber").innterHTML = random1;
 	//console.log(random1);
@@ -14,7 +15,22 @@ $(document).ready(function() {
 	$(".btn").on("click", function() {
 		//var images = $(this).closest("#images");
 		var amount = +$(this).val();
-		$("#score2").html(amount);
+		score = amount+score;
+		$("#score2").html(score);
+		
+		if (score === random1) {
+			$("#wins").html(wins++);
+			score = 0;
+			random1 = Math.floor(Math.random() * (120 - 19) + 19);
+				$("#randomNumber").html(random1);
+		};
+
+		if (score > random1) {
+			$("#losses").html(losses++);
+			score = 0;
+			random1 = Math.floor(Math.random() * (120 - 19) + 19);
+				$("#randomNumber").html(random1);
+		};
 
 	});
 
