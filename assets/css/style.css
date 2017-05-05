@@ -3,13 +3,51 @@ body{
 	margin: 30px;
 }
 
-title{
+h1{
+  color:rgba(100, 50, 255, .8);
+  text-align: center;
+}
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 1s infinite; 
+}
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
 }
 
 #randomNumber{
 	color: red;
 	font-size: 40px;
+	text-align: center;
 }
 
 #score{
@@ -20,4 +58,10 @@ title{
 #score2{
 	color: green;
 	font-size: 40px;
+	text-align: center;
+}
+
+
+h2, .images, #instructions{
+	text-align: center;
 }
